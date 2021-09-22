@@ -1,0 +1,263 @@
+* {
+  scroll-behavior: smooth;
+}
+.App-header {
+  background: white;
+  background-color: #029d57;
+  background-image: image("/newslideshow.png");
+}
+
+
+#nav-bar {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ padding-top: 8vh;
+}
+
+#nav-links-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#logo-container {
+ padding-left: 4vw
+}
+
+.close-menu {
+  position: relative;
+  right: 4vw;
+  margin-top: 7vh;
+  width: 40px;
+  float: right
+}
+.close-line  {
+  position: absolute;
+  background-color: gray;
+  width: 35px;
+  height: 3px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: all 1s
+}
+
+.line-one {
+  margin-bottom: 0;
+  transform: rotate(45deg);
+}
+.line-two {
+  margin-bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-links {
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+  text-align: center;
+  overflow-y: hidden;
+  width: 100%;
+  height: 0;
+  box-shadow: 0 1px 10px black;
+  transition: height .5s;
+  will-change: height;
+}
+.menu-links a {
+  color: black;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+.menu-links p {
+  color: black;
+  padding: 10px 20px;
+  margin: 5vh 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-line {
+  width: 10vw;
+  height: 5px;
+  background-color: white;
+  margin-bottom: 2px;
+}
+
+.App-logo {
+  height: 5.5vmin;
+  pointer-events: none;
+}
+
+#main-landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20vw;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#main-landing > * {
+  margin-bottom: 50px;
+}
+
+#main-landing:last-child {
+  margin-bottom: 0
+}
+
+.main-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-text-container h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+
+.main-text-container div a {
+  color: white;
+  text-decoration: underline;
+
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.links div{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.main-text-container p {
+  color: white;
+  font-size: 20px;
+}
+.play-app-store {
+  display: flex;
+  gap: 20px;
+}
+.play-app-store img {
+  width: 200px;
+  height: 60px;
+}
+
+
+.phones-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  overflow-y: hidden;
+}
+.phones-container div {
+  margin-top: 70px;
+  position: relative;
+  width: 300px;
+  height: 100%;
+}
+
+.phones {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+}
+
+.tilt {
+  top: 75px;
+  transition: 1s;
+  will-change: transform;
+}
+.t-left {
+  transform: rotate(-30deg);
+  margin-left: -100px;
+}
+.t-right {
+  transform: rotate(30deg);
+  margin-left: 100px;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+  #nav-bar  {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-text-container h1 {
+    font-size: 3rem;
+    color: white;
+  }
+
+  #nav-links-container{
+    display: none
+  }
+
+  .menu {
+    padding-right: 4vw;
+    display: block;
+  }
+
+  .play-app-store {
+    flex-direction: column;
+  }
+
+  .phones-container {
+    height: 300px;
+    overflow-x: hidden;
+  }
+
+
+  .phones-container div {
+    margin-top: 70px;
+    position: relative;
+    width: 200px;
+    height: 100%;
+  }
+
+  .phones {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+  }
+
+  .t-left {
+    transform: rotate(-20deg);
+    margin-left: -10px;
+  }
+  .t-right {
+    transform: rotate(20deg);
+    margin-left: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .phones-container div {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .phones-container {
+    overflow-x: hidden;
+  }
+  .phones-container div {
+    width: 50vw;
+  }
+}
